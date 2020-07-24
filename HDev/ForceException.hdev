@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="20.05.0.0">
+<procedure name="main">
+<interface/>
+<body>
+<l>ForceException (Tuple, Exception)</l>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+<procedure name="ForceException">
+<interface>
+<oc>
+<par name="Tuple" base_type="ctrl" dimension="0"/>
+<par name="Exception" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<body>
+<l>try</l>
+<l>read_tuple ('this_file_doesnt_exist.tup', Tuple)</l>
+<l>catch (Exception)</l>
+<l>endtry</l>
+<l>return ()</l>
+</body>
+<docu id="ForceException">
+<parameters>
+<parameter id="Exception"/>
+<parameter id="Tuple"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>
